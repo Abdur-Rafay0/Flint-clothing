@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLINT — Modern Minimalist Apparel & Lifestyle</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        flint: {
+                            dark: '#121316',
+                            charcoal: '#1E2025',
+                            slate: '#2B2E36',
+                            sand: '#E6DFD5',
+                            sandlight: '#F4F0EA',
+                            amber: '#D4A373',
+                            offwhite: '#F8F8F6',
+                            muted: '#8A8F9B'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        display: ['Syne', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-flint-dark text-flint-offwhite font-sans antialiased selection:bg-flint-amber selection:text-flint-dark overflow-x-hidden">
+
+    
+    <aside class="bg-flint-charcoal text-flint-sand text-xs tracking-widest uppercase font-medium py-2.5 px-4 text-center border-b border-white/5 relative z-50 flex items-center justify-center gap-3">
+        <span>Complimentary Worldwide Express Shipping on Orders Over $150</span>
+        <span class="hidden md:inline text-flint-amber">•</span>
+        <span class="hidden md:inline font-semibold">Use Code: <span class="text-white underline decoration-flint-amber decoration-2">FLINT10</span></span>
+    </aside>
+
+    <!-- Header Navigation -->
+    <header id="main-header" class="sticky top-0 z-40 w-full transition-all duration-300 border-b border-white/0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            
+            <!-- Mobile Menu Trigger -->
+            <button id="mobile-menu-btn" aria-label="Open navigation menu" class="lg:hidden text-white hover:text-flint-amber transition-colors p-2">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-br from-flint-amber to-flint-slate p-0.5 shadow-lg group-hover:scale-105 transition-transform duration-300">
+                    <div class="w-full h-full bg-flint-dark rounded-[7px] flex items-center justify-center">
+                        <svg class="w-5 h-5 text-flint-sand group-hover:text-flint-amber transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2L4.5 9.5C3 11 2 13 2 15.5A7.5 7.5 0 0 0 17 20c2-1.5 3-4 3-6.5 0-2.5-1.5-4.5-3-6L12 2z"/>
+                            <path d="M12 12c-1.5 1-2 2.5-2 4a3 3 0 0 0 6 0c0-1.5-.5-3-2-4z" fill="currentColor" class="text-flint-amber opacity-80"/>
+                        </svg>
+                    </div>
+                </div>
+                <span class="font-display font-extrabold text-2xl tracking-wider text-white uppercase group-hover:text-flint-sand transition-colors">FLINT</span>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium tracking-wider uppercase text-zinc-300">
+                <a href="#new-arrivals" class="hover:text-flint-amber transition-colors py-2 relative group">
+                    New Arrivals
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-flint-amber transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#categories" class="hover:text-flint-amber transition-colors py-2 relative group">
+                    Collections
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-flint-amber transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#editorial" class="hover:text-flint-amber transition-colors py-2 relative group">
+                    Editorial
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-flint-amber transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#philosophy" class="hover:text-flint-amber transition-colors py-2 relative group">
+                    Craftsmanship
+                    <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-flint-amber transition-all duration-300 group-hover:w-full"></span>
+                </a>
+            </nav>
+
+            <!-- User Utilities -->
+            <div class="flex items-center space-x-5 text-white">
+                <button aria-label="Search catalog" class="hover:text-flint-amber transition-colors p-1.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                </button>
+                <button aria-label="User Account" class="hidden sm:block hover:text-flint-amber transition-colors p-1.5">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                </button>
+                <button id="cart-drawer-trigger" aria-label="Shopping Cart" class="hover:text-flint-amber transition-colors p-1.5 relative group">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                    </svg>
+                    <span id="cart-badge-count" class="absolute -top-1.5 -right-2 bg-flint-amber text-flint-dark font-bold text-[10px] w-4 h-4 rounded-full flex items-center justify-center transition-transform group-hover:scale-110">0</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Slide Over Menu -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="mobile-menu-drawer" class="fixed inset-y-0 left-0 w-4/5 max-w-sm bg-flint-dark border-r border-white/10 p-6 flex flex-col justify-between transform -translate-x-full transition-transform duration-300 ease-in-out">
+            <div>
+                <div class="flex items-center justify-between pb-6 border-b border-white/10">
+                    <span class="font-display font-extrabold text-xl tracking-wider uppercase">FLINT</span>
+                    <button id="mobile-menu-close" aria-label="Close navigation menu" class="text-zinc-400 hover:text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <nav class="mt-8 flex flex-col space-y-6 text-lg font-medium tracking-wide">
+                    <a href="#new-arrivals" class="mobile-nav-link text-zinc-300 hover:text-flint-amber">New Arrivals</a>
+                    <a href="#categories" class="mobile-nav-link text-zinc-300 hover:text-flint-amber">Collections</a>
+                    <a href="#editorial" class="mobile-nav-link text-zinc-300 hover:text-flint-amber">Editorial Lookbook</a>
+                    <a href="#philosophy" class="mobile-nav-link text-zinc-300 hover:text-flint-amber">Our Philosophy</a>
+                </nav>
+            </div>
+            <div class="pt-6 border-t border-white/10 text-xs text-zinc-400 space-y-3">
+                <p>© 2026 FLINT Atelier Inc. All rights reserved.</p>
+                <div class="flex gap-4">
+                    <a href="#" class="hover:text-white">Instagram</a>
+                    <a href="#" class="hover:text-white">Pinterest</a>
+                    <a href="#" class="hover:text-white">Editorial</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[85vh] lg:min-h-[90vh] flex items-center justify-center overflow-hidden">
+        <!-- Hero Background Image with Overlay Gradient -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=2000&q=85" alt="Flint Apparel High Fashion Banner" class="w-full h-full object-cover object-top filter brightness-90">
+            <div class="absolute inset-0 bg-gradient-to-t from-flint-dark via-flint-dark/60 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-flint-dark/80 via-transparent to-flint-dark/80"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center pt-12 pb-20">
+            <!-- Badge -->
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-flint-sand text-xs tracking-widest uppercase mb-6 animate-fade-in">
+                <span class="w-1.5 h-1.5 rounded-full bg-flint-amber animate-pulse"></span>
+                Spring / Summer 2026 Collection
+            </div>
+
+            <h1 class="font-display text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight text-white mb-6 leading-[1.08]">
+                Refined Simplicity.<br>
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-flint-sand via-white to-flint-amber">Uncompromising Quality.</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-base sm:text-lg text-zinc-300 font-light mb-10 leading-relaxed">
+                Archival silhouettes reinterpreted for modern urban living. Crafted with organic materials, architectural precision, and enduring elegance.
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6">
+                <a href="#new-arrivals" class="w-full sm:w-auto px-8 py-4 bg-flint-sand hover:bg-white text-flint-dark font-semibold text-sm uppercase tracking-wider rounded-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-0.5 text-center">
+                    Explore Collection
+                </a>
+                <a href="#editorial" class="w-full sm:w-auto px-8 py-4 glass-panel hover:bg-white/15 text-white font-medium text-sm uppercase tracking-wider rounded-lg border border-white/20 transition-all duration-300 text-center flex items-center justify-center gap-2">
+                    <svg class="w-4 h-4 text-flint-amber" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                    Watch Campaign
+                </a>
+            </div>
+
+            <!-- Floating Feature Badges -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mt-16 pt-12 border-t border-white/10 max-w-3xl mx-auto text-left">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-flint-charcoal border border-white/10 flex items-center justify-center text-flint-amber shrink-0">
+                        ✓
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-white uppercase">100% Organic</p>
+                        <p class="text-[11px] text-zinc-400">Egyptian Cotton & Linens</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-flint-charcoal border border-white/10 flex items-center justify-center text-flint-amber shrink-0">
+                        🌿
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-white uppercase">Ethically Crafted</p>
+                        <p class="text-[11px] text-zinc-400">Zero Plastic Waste Atelier</p>
+                    </div>
+                </div>
+                <div class="col-span-2 md:col-span-1 flex items-center gap-3 justify-center md:justify-start">
+                    <div class="w-8 h-8 rounded-full bg-flint-charcoal border border-white/10 flex items-center justify-center text-flint-amber shrink-0">
+                        ♾️
+                    </div>
+                    <div>
+                        <p class="text-xs font-semibold text-white uppercase">Lifetime Repair</p>
+                        <p class="text-[11px] text-zinc-400">Garment Guarantee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories Grid -->
+    <section id="categories" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+            <div>
+                <span class="text-flint-amber text-xs uppercase tracking-widest font-semibold">Curated Lineup</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Signature Categories</h2>
+            </div>
+            <p class="text-zinc-400 text-sm max-w-md mt-4 md:mt-0">
+                Explore structural outerwear, refined tailoring, and daily essential layers engineered for timeless comfort.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- Category 1 -->
+            <div class="group relative h-[480px] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=800&q=80" alt="Minimal Outerwear" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-flint-dark via-flint-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute bottom-0 inset-x-0 p-8 flex flex-col justify-end">
+                    <span class="text-flint-amber text-xs font-mono uppercase tracking-widest mb-1">01 / Outerwear</span>
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Structural Trench & Coats</h3>
+                    <p class="text-zinc-300 text-sm line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">Weatherproof technical wools & minimalist silhouettes designed for transitional climate.</p>
+                    <div class="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-flint-sand group-hover:text-white">
+                        <span>View Collection</span>
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 2 -->
+            <div class="group relative h-[480px] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80" alt="Minimal Tailoring" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-flint-dark via-flint-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute bottom-0 inset-x-0 p-8 flex flex-col justify-end">
+                    <span class="text-flint-amber text-xs font-mono uppercase tracking-widest mb-1">02 / Tailoring</span>
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Relaxed Tailored Suits</h3>
+                    <p class="text-zinc-300 text-sm line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">Unstructured blazers and fluid trousers built with Italian stretch wool weaves.</p>
+                    <div class="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-flint-sand group-hover:text-white">
+                        <span>View Collection</span>
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Category 3 -->
+            <div class="group relative h-[480px] rounded-2xl overflow-hidden border border-white/10 cursor-pointer">
+                <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?auto=format&fit=crop&w=800&q=80" alt="Everyday Essentials" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-flint-dark via-flint-dark/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
+                <div class="absolute bottom-0 inset-x-0 p-8 flex flex-col justify-end">
+                    <span class="text-flint-amber text-xs font-mono uppercase tracking-widest mb-1">03 / Essentials</span>
+                    <h3 class="font-display text-2xl font-bold text-white mb-2">Heavyweight Knitwear</h3>
+                    <p class="text-zinc-300 text-sm line-clamp-2 opacity-80 group-hover:opacity-100 transition-opacity">High-density organic tees, cashmeres, and fleece engineered for daily luxury durability.</p>
+                    <div class="mt-4 flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-flint-sand group-hover:text-white">
+                        <span>View Collection</span>
+                        <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals & Interactive Product Grid -->
+    <section id="new-arrivals" class="py-20 bg-flint-charcoal/50 border-y border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-flint-amber text-xs uppercase tracking-widest font-semibold">New Additions</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-1">The Season's Best</h2>
+                </div>
+
+                <!-- Category Filter Tabs -->
+                <div class="flex flex-wrap items-center gap-2 p-1.5 bg-flint-dark rounded-xl border border-white/10 self-start sm:self-auto">
+                    <button data-filter="all" class="filter-tab active px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-white bg-flint-slate transition-all">All Pieces</button>
+                    <button data-filter="outerwear" class="filter-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-zinc-400 hover:text-white transition-all">Outerwear</button>
+                    <button data-filter="tops" class="filter-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-zinc-400 hover:text-white transition-all">Tops & Knitwear</button>
+                    <button data-filter="trousers" class="filter-tab px-4 py-2 rounded-lg text-xs font-semibold uppercase tracking-wider text-zinc-400 hover:text-white transition-all">Trousers</button>
+                </div>
+            </div>
+
+            <!-- Dynamic Product Grid Container -->
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Products will be dynamically populated via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Editorial Lookbook Banner Section -->
+    <section id="editorial" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="relative rounded-3xl overflow-hidden bg-flint-charcoal border border-white/10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 min-h-[550px]">
+                <div class="lg:col-span-7 relative h-72 lg:h-auto overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1200&q=80" alt="Flint Lookbook" class="w-full h-full object-cover object-top">
+                    <div class="absolute inset-0 bg-gradient-to-r from-transparent to-flint-charcoal/80 hidden lg:block"></div>
+                </div>
+                <div class="lg:col-span-5 p-8 sm:p-12 lg:p-16 flex flex-col justify-center">
+                    <span class="text-flint-amber text-xs uppercase tracking-widest font-semibold mb-2">SS/26 Lookbook</span>
+                    <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mb-6 leading-tight">Monochrome & Architecture</h2>
+                    <p class="text-zinc-300 text-sm leading-relaxed mb-8">
+                        Shot in Northern Iceland, our latest capsule explores high-density weave construction, stormproof finishes, and boxy minimal cuts crafted for the elements.
+                    </p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start gap-4">
+                            <span class="text-flint-amber font-display font-bold text-lg">01.</span>
+                            <div>
+                                <h4 class="text-white text-sm font-semibold">Zero Synthetic Microfibers</h4>
+                                <p class="text-xs text-zinc-400">100% natural organic fibers dyed with low-impact botanical pigments.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <span class="text-flint-amber font-display font-bold text-lg">02.</span>
+                            <div>
+                                <h4 class="text-white text-sm font-semibold">Ergonomic Cut Lines</h4>
+                                <p class="text-xs text-zinc-400">Articulated sleeves and pleated trousers for unrestrained movement.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button class="px-6 py-3.5 bg-flint-amber hover:bg-opacity-90 text-flint-dark font-semibold text-xs uppercase tracking-wider rounded-lg transition-all shadow-md">
+                            Read Editorial Feature
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brand Philosophy / Sustainable Craftsmanship -->
+    <section id="philosophy" class="py-20 bg-flint-charcoal/30 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-flint-amber text-xs uppercase tracking-widest font-semibold">Our Ethos</span>
+                <h2 class="font-display text-3xl sm:text-4xl font-bold text-white mt-2">Designed To Endure Beyond Seasons</h2>
+                <p class="text-zinc-400 text-sm mt-4 leading-relaxed">
+                    Fast fashion is obsolete. We construct garments engineered to age gracefully, using heavy-duty natural fabrics and timeless tailoring principles.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-flint-dark p-8 rounded-2xl border border-white/5 hover:border-flint-amber/30 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-flint-charcoal border border-white/10 flex items-center justify-center text-flint-amber mb-6 group-hover:scale-110 transition-transform">
+                        🧶
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-3">Traceable Organic Sourcing</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Every thread originates from certified fair-trade farms in Egypt and Portugal. Transparent supply chains guarantee environmental respect.
+                    </p>
+                </div>
+
+                <div class="bg-flint-dark p-8 rounded-2xl border border-white/5 hover:border-flint-amber/30 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-flint-charcoal border border-white/10 flex items-center justify-center text-flint-amber mb-6 group-hover:scale-110 transition-transform">
+                        ✂️
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-3">Precision Italian Tailoring</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Crafted in small batches by master artisans in Milan. Reinforced stress points, bound interior seams, and horn buttoning guarantee durability.
+                    </p>
+                </div>
+
+                <div class="bg-flint-dark p-8 rounded-2xl border border-white/5 hover:border-flint-amber/30 transition-all group">
+                    <div class="w-12 h-12 rounded-xl bg-flint-charcoal border border-white/10 flex items-center justify-center text-flint-amber mb-6 group-hover:scale-110 transition-transform">
+                        ♻️
+                    </div>
+                    <h3 class="font-display text-xl font-bold text-white mb-3">Circular Life Program</h3>
+                    <p class="text-zinc-400 text-xs sm:text-sm leading-relaxed">
+                        Send back your worn FLINT garments anytime for atelier restoration or recycle credits toward future archival pieces.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Customer Testimonials -->
+    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <span class="text-flint-amber text-xs uppercase tracking-widest font-semibold">Community Voices</span>
+            <h2 class="font-display text-3xl font-bold text-white mt-2">What Our Collectors Say</h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Review 1 -->
+            <div class="bg-flint-charcoal p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-flint-amber mb-4 text-sm">★★★★★</div>
+                    <p class="text-zinc-300 text-sm italic leading-relaxed mb-6">
+                        "The Minimal Wool Overcoat is easily the best investment piece in my wardrobe. Structural, heavy, and the lining feels like pure silk."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-flint-slate font-bold flex items-center justify-center text-white text-xs">
+                        EA
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold">Ethan A.</h4>
+                        <p class="text-zinc-500 text-xs">Verified Buyer • New York</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 2 -->
+            <div class="bg-flint-charcoal p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-flint-amber mb-4 text-sm">★★★★★</div>
+                    <p class="text-zinc-300 text-sm italic leading-relaxed mb-6">
+                        "FLINT's heavy organic cotton tees hold their collar shape even after dozens of washes. The drape is unmatched in streetwear."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-flint-slate font-bold flex items-center justify-center text-white text-xs">
+                        SK
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold">Sophia K.</h4>
+                        <p class="text-zinc-500 text-xs">Verified Buyer • London</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Review 3 -->
+            <div class="bg-flint-charcoal p-8 rounded-2xl border border-white/10 flex flex-col justify-between">
+                <div>
+                    <div class="flex text-flint-amber mb-4 text-sm">★★★★★</div>
+                    <p class="text-zinc-300 text-sm italic leading-relaxed mb-6">
+                        "Customer service was exceptional when I needed a size swap. Delivery took only 2 days to Tokyo. Exceptional brand."
+                    </p>
+                </div>
+                <div class="flex items-center gap-3 pt-4 border-t border-white/10">
+                    <div class="w-10 h-10 rounded-full bg-flint-slate font-bold flex items-center justify-center text-white text-xs">
+                        RT
+                    </div>
+                    <div>
+                        <h4 class="text-white text-sm font-semibold">Ryota T.</h4>
+                        <p class="text-zinc-500 text-xs">Verified Buyer • Tokyo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="py-20 bg-gradient-to-b from-flint-charcoal to-flint-dark border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <span class="text-flint-amber text-xs uppercase tracking-widest font-semibold">Private Access</span>
+            <h2 class="font-display text-3xl sm:text-5xl font-bold text-white mt-2 mb-4">Join The FLINT Journal</h2>
+            <p class="text-zinc-400 text-sm sm:text-base max-w-xl mx-auto mb-8">
+                Subscribe to receive private invitations to limited capsule drops, editorial lookbooks, and 10% off your inaugural order.
+            </p>
+
+            <form id="newsletter-form" class="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto">
+                <input id="newsletter-email" type="email" placeholder="Enter your email address" required class="w-full px-5 py-3.5 bg-flint-dark border border-white/15 rounded-xl text-white placeholder-zinc-500 text-sm focus:outline-none focus:border-flint-amber transition-colors">
+                <button type="submit" class="w-full sm:w-auto px-8 py-3.5 bg-flint-sand hover:bg-white text-flint-dark font-semibold text-xs uppercase tracking-wider rounded-xl transition-all whitespace-nowrap">
+                    Subscribe
+                </button>
+            </form>
+            <p id="newsletter-feedback" class="mt-4 text-xs text-flint-amber hidden font-medium"></p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-flint-dark border-t border-white/10 text-zinc-400 text-xs pt-16 pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
+                
+                <!-- Brand Column -->
+                <div class="lg:col-span-2 space-y-4">
+                    <a href="#" class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-flint-amber p-0.5">
+                            <div class="w-full h-full bg-flint-dark rounded-[6px] flex items-center justify-center">
+                                <svg class="w-4 h-4 text-flint-sand" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L4.5 9.5C3 11 2 13 2 15.5A7.5 7.5 0 0 0 17 20c2-1.5 3-4 3-6.5 0-2.5-1.5-4.5-3-6L12 2z"/></svg>
+                            </div>
+                        </div>
+                        <span class="font-display font-bold text-xl text-white uppercase tracking-wider">FLINT</span>
+                    </a>
+                    <p class="text-zinc-400 text-xs max-w-sm leading-relaxed">
+                        High-end luxury streetwear & modern apparel engineered with architectural simplicity and organic craftsmanship.
+                    </p>
+                    <div class="pt-2 flex gap-4 text-zinc-300">
+                        <a href="#" aria-label="Instagram" class="hover:text-flint-amber transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="#" aria-label="Twitter" class="hover:text-flint-amber transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Collections -->
+                <div>
+                    <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Collections</h3>
+                    <ul class="space-y-2.5">
+                        <li><a href="#new-arrivals" class="hover:text-white transition-colors">SS/26 Capsule</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Minimal Tailoring</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Outerwear & Coats</a></li>
+                        <li><a href="#categories" class="hover:text-white transition-colors">Everyday Knitwear</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Archival Pieces</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Customer Care -->
+                <div>
+                    <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Customer Care</h3>
+                    <ul class="space-y-2.5">
+                        <li><a href="#" class="hover:text-white transition-colors">Client Services</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Shipping & Returns</a></li>
+                        <li><button id="trigger-size-guide" class="hover:text-white transition-colors text-left">Garment Size Guide</button></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Care Instructions</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Track Order</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Atelier -->
+                <div>
+                    <h3 class="text-white text-sm font-semibold uppercase tracking-wider mb-4">Atelier</h3>
+                    <ul class="space-y-2.5">
+                        <li><a href="#philosophy" class="hover:text-white transition-colors">Our Philosophy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Sustainability Report</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Milan Workshop</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Press & Media</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-zinc-500">
+                <p>© 2026 FLINT Atelier Inc. All rights reserved.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-zinc-300">Privacy Policy</a>
+                    <a href="#" class="hover:text-zinc-300">Terms of Service</a>
+                    <div class="flex items-center gap-1 text-zinc-300">
+                        <span>USD ($)</span>
+                        <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Slide-out Shopping Cart Drawer -->
+    <div id="cart-drawer-backdrop" class="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+        <div id="cart-drawer" class="fixed inset-y-0 right-0 w-full max-w-md bg-flint-dark border-l border-white/10 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl">
+            <!-- Header -->
+            <div>
+                <div class="flex items-center justify-between pb-4 border-b border-white/10">
+                    <div class="flex items-center gap-2">
+                        <h3 class="font-display font-bold text-lg text-white">Your Shopping Bag</h3>
+                        <span id="cart-count-title" class="text-xs text-flint-amber font-mono">(0)</span>
+                    </div>
+                    <button id="cart-drawer-close" aria-label="Close cart drawer" class="text-zinc-400 hover:text-white p-2">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+
+                <!-- Free Shipping Progress Bar -->
+                <div class="py-4 border-b border-white/10">
+                    <div class="flex justify-between text-xs mb-1.5">
+                        <span id="shipping-progress-text" class="text-zinc-300">Add $150.00 for Free Express Shipping</span>
+                        <span id="shipping-progress-percent" class="text-flint-amber font-bold">0%</span>
+                    </div>
+                    <div class="w-full bg-flint-slate h-1.5 rounded-full overflow-hidden">
+                        <div id="shipping-progress-bar" class="bg-flint-amber h-full w-0 transition-all duration-300"></div>
+                    </div>
+                </div>
+
+                <!-- Items Container -->
+                <div id="cart-items-container" class="py-4 max-h-[50vh] overflow-y-auto space-y-4">
+                    <!-- Dynamic Cart Items injected here -->
+                </div>
+            </div>
+
+            <!-- Cart Footer -->
+            <div class="pt-4 border-t border-white/10 space-y-4">
+                <div class="space-y-1.5 text-sm">
+                    <div class="flex justify-between text-zinc-400">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal" class="text-white font-mono">$0.00</span>
+                    </div>
+                    <div class="flex justify-between text-zinc-400">
+                        <span>Estimated Express Shipping</span>
+                        <span id="cart-shipping-cost" class="text-zinc-300 font-mono">Calculated at next step</span>
+                    </div>
+                    <div class="flex justify-between text-base font-bold text-white pt-2 border-t border-white/5">
+                        <span>Total</span>
+                        <span id="cart-total" class="text-flint-amber font-mono">$0.00</span>
+                    </div>
+                </div>
+
+                <button id="checkout-btn" class="w-full py-4 bg-flint-amber hover:bg-opacity-90 text-flint-dark font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-lg flex items-center justify-center gap-2">
+                    <span>Proceed To Checkout</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Product Modal -->
+    <div id="quickview-modal-backdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+        <div id="quickview-modal" class="bg-flint-dark border border-white/15 rounded-2xl w-full max-w-3xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300 relative max-h-[90vh] overflow-y-auto">
+            <button id="quickview-close" class="absolute top-4 right-4 z-10 text-zinc-400 hover:text-white bg-flint-dark/80 rounded-full p-2 border border-white/10">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+
+            <div class="grid grid-cols-1 md:grid-cols-2">
+                <div class="h-80 md:h-full bg-flint-charcoal">
+                    <img id="qv-image" src="" alt="Product Quick View" class="w-full h-full object-cover">
+                </div>
+                <div class="p-6 sm:p-8 flex flex-col justify-between space-y-6">
+                    <div>
+                        <span id="qv-category" class="text-flint-amber text-xs uppercase tracking-widest font-mono">Category</span>
+                        <h3 id="qv-title" class="font-display text-2xl font-bold text-white mt-1">Product Title</h3>
+                        <p id="qv-price" class="text-xl font-mono text-flint-sand font-semibold mt-2">$0.00</p>
+                        <p id="qv-description" class="text-zinc-400 text-xs sm:text-sm mt-4 leading-relaxed">Detailed product specifications and archival craftsmanship details.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- Size Selector -->
+                        <div>
+                            <div class="flex justify-between text-xs mb-2">
+                                <span class="text-zinc-300 font-semibold">Select Size</span>
+                                <button id="qv-size-guide-trigger" class="text-flint-amber hover:underline">Size Guide</button>
+                            </div>
+                            <div class="grid grid-cols-4 gap-2">
+                                <button class="qv-size-btn border border-white/10 hover:border-flint-amber py-2 text-xs font-mono rounded-lg text-white">S</button>
+                                <button class="qv-size-btn border border-flint-amber bg-flint-amber/10 py-2 text-xs font-mono rounded-lg text-white font-bold">M</button>
+                                <button class="qv-size-btn border border-white/10 hover:border-flint-amber py-2 text-xs font-mono rounded-lg text-white">L</button>
+                                <button class="qv-size-btn border border-white/10 hover:border-flint-amber py-2 text-xs font-mono rounded-lg text-white">XL</button>
+                            </div>
+                        </div>
+
+                        <!-- Add to Bag Action -->
+                        <button id="qv-add-to-cart" class="w-full py-3.5 bg-flint-sand hover:bg-white text-flint-dark font-bold text-xs uppercase tracking-wider rounded-xl transition-all shadow-md">
+                            Add To Bag
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Size Guide Modal -->
+    <div id="sizeguide-modal-backdrop" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300 flex items-center justify-center p-4">
+        <div class="bg-flint-dark border border-white/15 rounded-2xl w-full max-w-xl p-6 sm:p-8 shadow-2xl relative">
+            <button id="sizeguide-close" class="absolute top-4 right-4 text-zinc-400 hover:text-white p-2">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+            </button>
+            <h3 class="font-display text-xl font-bold text-white mb-2">FLINT Garment Measurement Guide</h3>
+            <p class="text-xs text-zinc-400 mb-6">All measurements are shown in inches. Our tailored cuts feature a relaxed, modern structured fit.</p>
+
+            <div class="overflow-x-auto">
+                <table class="w-full text-left text-xs text-zinc-300 border-collapse">
+                    <thead>
+                        <tr class="border-b border-white/10 text-flint-amber font-mono">
+                            <th class="py-2">Size</th>
+                            <th class="py-2">Chest</th>
+                            <th class="py-2">Waist</th>
+                            <th class="py-2">Shoulder</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-white/5 font-mono">
+                        <tr><td class="py-2.5 font-bold text-white">S</td><td>36 - 38"</td><td>30 - 32"</td><td>17.5"</td></tr>
+                        <tr><td class="py-2.5 font-bold text-white">M</td><td>38 - 40"</td><td>32 - 34"</td><td>18.0"</td></tr>
+                        <tr><td class="py-2.5 font-bold text-white">L</td><td>40 - 42"</td><td>34 - 36"</td><td>18.5"</td></tr>
+                        <tr><td class="py-2.5 font-bold text-white">XL</td><td>42 - 44"</td><td>36 - 38"</td><td>19.2"</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/10 text-[11px] text-zinc-500">
+                Need bespoke tailoring advice? Contact our atelier concierge at concierge@flint-atelier.com.
+            </div>
+        </div>
+    </div>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
